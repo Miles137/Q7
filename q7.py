@@ -15,7 +15,7 @@ Created on Fri Oct 11 15:17:56 2019
 ij = input('Enter X,Y (X = no. of rows, Y = no. of columns): ').split(',')  
 ij = [int(ij[ind]) for ind in [0,1]] #[X,Y]
 
-array = [[0 for yval in list(range(ij[1]))] for xval in list(range(ij[0]))]
+array = [[0 for yval in list(range(ij[1]))] for xval in list(range(ij[0]))] #error here was having each of the rows pointing to the same 'zerorow' variable, so changing one row changed them all
 
 for row_ind in [i for i in range(ij[0])]:
     for col_ind in [i for i in range(ij[1])]:
